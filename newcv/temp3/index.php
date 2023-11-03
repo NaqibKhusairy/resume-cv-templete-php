@@ -75,6 +75,12 @@
             .last{
                 border-bottom: 1px solid black;
             }
+            .round-image {
+                width: 2.73cm;
+                height: 2.73cm;
+                border: 1px solid black;
+                border-radius: 50%;
+            }
         </style>
     </head>
     <body>
@@ -85,16 +91,25 @@
                         <td class="col1"></td>
                         <td class="col2"></td>
                         <td class="col3"></td>
-                        <td class="col4" rowspan="4"><center>Image</center></td>
+                        <td class="col4" rowspan="4">
+                            <center>
+                                <img id="profile-image" class="round-image" src="your_image_url.jpg" alt="Profile Image">
+                                <input type="file" name="profile_image" onchange="displayImage(this)" required>
+                            </center>
+                        </td>
                     </tr>
                     <tr>
                         <td class="col1"></td>
-                        <td class="col2">FULL NAME</td>
+                        <td class="col2">
+                            <input type="text" name="full_name" placeholder="Full Name" required>
+                        </td>
                         <td class="col3"></td>
                     </tr>
                     <tr>
                         <td class="col1"></td>
-                        <td class="col2">Job Title</td>
+                        <td class="col2">
+                            <input type="text" name="current_job_title" placeholder="Current Job Title" required>
+                        </td>
                         <td class="col3"></td>
                     </tr>
                     <tr class="botborder">
@@ -118,25 +133,39 @@
                         <td class="col1"></td>
                         <td class="col2"></td>
                         <td class="col3"></td>
-                        <td class="col4">LinkedIn Link</td>
+                        <td class="col4">
+                            <input type="text" name="linkedin" placeholder="Linkedin" required>
+                        </td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2" id="boldtxt">Job Title</td>
+                        <td class="col2" id="boldtxt">
+                            <input type="text" name="job_title1" placeholder="Job Title" required>
+                        </td>
                         <td class="col3"></td>
-                        <td class="col4">email</td>
+                        <td class="col4">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2">Company Name</td>
+                        <td class="col2">
+                            <input type="text" name="company_name1" placeholder="Company Name" required>
+                        </td>
                         <td class="col3"></td>
-                        <td class="col4">Phone</td>
+                        <td class="col4">
+                            <input type="text" name="phone" placeholder="Phone" required>
+                        </td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2">Year (Duration)</td>
+                        <td class="col2">
+                            <input type="text" name="yearjob1" placeholder="Year (Duration)" required>
+                        </td>
                         <td class="col3"></td>
-                        <td class="col4">Website</td>
+                        <td class="col4">
+                            <input type="text" name="site" placeholder="Website">
+                        </td>
                     </tr>
                     <tr class="bot4border" id="leftborder">
                         <td class="col1"></td>
@@ -152,34 +181,46 @@
                     </tr>
                     <tr id="leftborder" class="bld">
                         <td class="col1"></td>
-                        <td class="col2" rowspan="6">Detail</td>
+                        <td class="col2" rowspan="6">
+                            <textarea id="detailjob1" name="detailjob1" rows="10" cols="42" placeholder="Detail" required maxlength="400" wrap="soft"></textarea>
+                        </td>
                         <td class="col3"></td>
                         <td class="col4">Relevent Skills</td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
                         <td class="col3"></td>
-                        <td class="col4">Skill 1</td>
+                        <td class="col4">
+                            <input type="text" name="skill1" placeholder="Skill 1" required>
+                        </td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
                         <td class="col3"></td>
-                        <td class="col4">Skill 2</td>
+                        <td class="col4">
+                            <input type="text" name="skill2" placeholder="Skill 2">
+                        </td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
                         <td class="col3"></td>
-                        <td class="col4">Skill 3</td>
+                        <td class="col4">
+                            <input type="text" name="skill3" placeholder="Skill 3">
+                        </td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
                         <td class="col3"></td>
-                        <td class="col4">Skill 4</td>
+                        <td class="col4">
+                            <input type="text" name="skill4" placeholder="Skill 4">
+                        </td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
                         <td class="col3"></td>
-                        <td class="col4">Skill 5</td>
+                        <td class="col4">
+                            <input type="text" name="skill5" placeholder="Skill 5">
+                        </td>
                     </tr>
                     <tr class="bot4border" id="leftborder">
                         <td class="col1"></td>
@@ -195,27 +236,41 @@
                     </tr>
                     <tr id="leftborder" class="bld">
                         <td class="col1"></td>
-                        <td class="col2" id="boldtxt">Job Title</td>
+                        <td class="col2" id="boldtxt">
+                            <input type="text" name="job_title2" placeholder="Job Title" >
+                        </td>
                         <td class="col3"></td>
                         <td class="col4">Volunteer Works Aand Interests</td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2">Company Name</td>
+                        <td class="col2">
+                            <input type="text" name="company_name2" placeholder="Company Name" >
+                        </td>
                         <td class="col3"></td>
-                        <td class="col4">V1</td>
+                        <td class="col4">
+                            <input type="text" name="v1" placeholder="V1" required>
+                        </td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2">Year (Duration)</td>
+                        <td class="col2">
+                            <input type="text" name="yearjob2" placeholder="Year (Duration)">
+                        </td>
                         <td class="col3"></td>
-                        <td class="col4">V2</td>
+                        <td class="col4">
+                            <input type="text" name="v2" placeholder="V2" >
+                        </td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2" rowspan="6">Detail</td>
+                        <td class="col2" rowspan="6">
+                            <textarea id="detailjob2" name="detailjob2" rows="10" cols="42" placeholder="Detail" maxlength="400" wrap="soft"></textarea>
+                        </td>
                         <td class="col3"></td>
-                        <td class="col4">V3</td>
+                        <td class="col4">
+                            <input type="text" name="v3" placeholder="V3" >
+                        </td>
                     </tr>
                     </tr>
                     <tr id="leftborder">
@@ -269,25 +324,33 @@
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2" id="boldtxt">Degree in ???</td>
+                        <td class="col2" id="boldtxt">
+                            <input type="text" name="degree" placeholder="Degree in ???" required>
+                        </td>
                         <td class="col3"></td>
                         <td class="col4"></td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2">Faculty of Education</td>
+                        <td class="col2">
+                            <input type="text" name="facultyofeducation" placeholder="Faculty of Education" required>
+                        </td>
                         <td class="col3"></td>
                         <td class="col4"></td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2">Year of grad</td>
+                        <td class="col2">
+                            <input type="text" name="yearofgrad" placeholder="Year Of Grad" required>
+                        </td>
                         <td class="col3"></td>
                         <td class="col4"></td>
                     </tr>
                     <tr id="leftborder">
                         <td class="col1"></td>
-                        <td class="col2" rowspan="3">Detail</td>
+                        <td class="col2" rowspan="3">
+                            <textarea id="detailedu" name="detailedu" rows="5" cols="42" placeholder="Detail" maxlength="200" wrap="soft" required></textarea>
+                        </td>
                         <td class="col3">&ensp;</td>
                         <td class="col4"></td>
                     </tr>
@@ -317,5 +380,18 @@
                 </table>
             </center>
         </form>
+        <script>
+            // JavaScript function to display the user-uploaded image
+            function displayImage(input) {
+                var profileImage = document.getElementById('profile-image');
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        profileImage.src = e.target.result;
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
     </body>
 </html>
